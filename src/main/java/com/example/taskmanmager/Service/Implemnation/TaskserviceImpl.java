@@ -40,12 +40,17 @@ public class TaskserviceImpl  implements TaskService {
     }
 
     @Override
-    public void updateTsk(TaskDto taskDto, Long id) {
-
+    public void updateTsk(TaskDto taskDto) {
+        Task exsitingTask = taskRepository.findById(taskDto.getTaskId()).orElse(null);
+        if(exsitingTask!=null){
+            Task updatedTask= taskAdapter.TaskDtoTask(taskDto);
+            taskRepository.save(exsitingTask);
+        }
     }
+
 
     @Override
     public void deletedTask(Long id) {
-
+         taskRepository.deleteById(id);
     }
 }
