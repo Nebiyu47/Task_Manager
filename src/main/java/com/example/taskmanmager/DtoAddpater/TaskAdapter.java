@@ -3,7 +3,9 @@ package com.example.taskmanmager.DtoAddpater;
 import com.example.taskmanmager.Dto.TaskDto;
 import com.example.taskmanmager.Entity.Category;
 import com.example.taskmanmager.Entity.Task;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TaskAdapter {
 
     public TaskDto taskToTaskDto(Task task){
