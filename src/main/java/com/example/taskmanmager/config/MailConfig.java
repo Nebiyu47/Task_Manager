@@ -10,10 +10,10 @@ import java.util.Properties;
 
 @Configuration
 public class MailConfig {
-    private final String username = "nebiyugirma609@gmail.com";
+    private final String username = "";
 
     // Replace with your Gmail app password or account password
-    private final String password = "tppzucaqevxxakdu";
+    private final String password = "";
     @Bean
     public JavaMailSender javaMailSender(){
     JavaMailSenderImpl mailSender= new JavaMailSenderImpl();
