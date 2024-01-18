@@ -10,8 +10,8 @@ public class UserAdapter {
     public  UserDto UserToUserDto(User user){
         UserDto userDto = new UserDto();
         userDto.setUserId(user.getUserId());
-        userDto.setUsername(userDto.getUsername());
-        userDto.setEmail(userDto.getEmail());
+        userDto.setUsername(user.getUsername());
+        userDto.setEmail(user.getEmail());
         return userDto;
     }
     public  User UserDtoToUser( UserDto userDto){

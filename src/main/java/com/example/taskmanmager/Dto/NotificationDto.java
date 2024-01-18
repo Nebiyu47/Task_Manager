@@ -11,7 +11,7 @@ public class NotificationDto {
 
     private Long notificationId;
 
-    private String content;
+    private String message;
 
-    private Long recipientId;
+    private Long userId;
 }

@@ -29,5 +29,8 @@ public class Task {
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name="category_id")
     private Category category;
+    @ManyToOne
+    @JoinColumn(name = "assignee_id")
+    private User assignee;
 
 }

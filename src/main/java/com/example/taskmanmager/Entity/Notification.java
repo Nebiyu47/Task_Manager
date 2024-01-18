@@ -16,9 +16,9 @@ public class Notification {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "notificationId")
   private Long notificationId;
-  @Column(name="content")
-  private String content;
+  @Column(name="message")
+  private String message;
   @ManyToOne
-  @JoinColumn(name = "recipient_id")
-  private  User recipient;
+  @JoinColumn(name = "user_id")
+  private  User user;
 }

@@ -38,17 +38,21 @@ public class UserServiceIMPL implements UserService {
 
     @Override
     public void addUser(UserDto userDto) {
-    User user= new User();
-      userRepository.save(user);
+        User user = new User();
+        user.setUsername(userDto.getUsername());
+        user.setEmail(userDto.getEmail());
+        // ... set other properties
+
+        userRepository.save(user);
     }
 
     @Override
     public void updated(UserDto userDto) {
-      User user= userRepository.findById(userDto.getUserId()).orElse(null);
-      if(user!=null){
-      User user1=userAdapter.UserDtoToUser(userDto);
-       userRepository.save(user);
-      }
+        User user = userRepository.findById(userDto.getUserId()).orElse(null);
+        if (user != null) {
+            User updatedUser = userAdapter.UserDtoToUser(userDto);
+            userRepository.save(updatedUser);  // Save the updatedUser, not the original user
+        }
     }
 
     @Override

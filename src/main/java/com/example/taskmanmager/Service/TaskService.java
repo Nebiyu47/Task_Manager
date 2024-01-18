@@ -8,6 +8,6 @@ public interface TaskService {
     List<TaskDto> getAllTask();
     TaskDto GetByTaskId(Long TaskId);
     void addTask(TaskDto taskDto);
-    void  updateTsk(TaskDto taskDto);
+    void  updateTsk(Long taskId, TaskDto taskDto );
     void deletedTask(Long id);
 }

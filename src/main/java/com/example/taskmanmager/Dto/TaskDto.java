@@ -14,7 +14,7 @@ public class TaskDto {
     private String description;
 
     private TaskStatus status;
-
+    private UserDto assigned;
 
     private Long categoryId;
 
